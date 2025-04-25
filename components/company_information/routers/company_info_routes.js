@@ -14,7 +14,7 @@ const deleteCompanyInfo = require("../controllers/delete_company_info");
 router.post("/",verifyToken, checkRole("admin", "editor"), upload.array("image", 3), createCompanyInfo);
 router.get("/", listCompanyInfo);
 router.get("/:id", getCompanyInfo);
-router.put("/:id",verifyToken, checkRole("admin", "editor"), upload.single("image", 3), updateCompanyInfo);
+router.put("/:id",verifyToken, checkRole("admin", "editor"), upload.array("image", 3), updateCompanyInfo);
 router.delete("/:id",verifyToken, checkRole("admin", "editor"), deleteCompanyInfo);
 
 module.exports = router;
