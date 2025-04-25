@@ -33,4 +33,20 @@ router.use("/users", userRoutes);
 const subscriberRoutes = require("./components/subscriber/routers/subscriber_routes.js");
 router.use("/subscribers", subscriberRoutes);
 
+// Company Information Routes
+const companyInfoRoutes = require("./components/company_information/routers/company_info_routes.js");
+router.use("/company-info", companyInfoRoutes);
+
+//Mission and Vision Routes
+const missionVisionRoutes = require("./components/mission_and_vision/routers/mission_vision_routes.js");
+router.use("/mission-vision", missionVisionRoutes);
+
+// Team Routes
+const teamRoutes = require("./components/teams/routers/team_routes.js");
+router.use("/team", teamRoutes);
+
+// CEO Message Routes
+const ceoMessageRoutes = require("./components/ceo_message/routers/ceo_message_routes.js"); 
+router.use("/ceo-message", ceoMessageRoutes);
+
 module.exports = router;
