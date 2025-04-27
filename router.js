@@ -49,4 +49,12 @@ router.use("/team", teamRoutes);
 const ceoMessageRoutes = require("./components/ceo_message/routers/ceo_message_routes.js"); 
 router.use("/ceo-message", ceoMessageRoutes);
 
+// Report Routes
+const reportRoutes = require("./components/report/routers/report_routes.js");       
+router.use("/reports", reportRoutes);
+
+// Milestone Routes
+const milestoneRoutes = require("./components/milestone/routers/milestone_routes.js");
+router.use("/milestones", milestoneRoutes);
+
 module.exports = router;
