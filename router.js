@@ -57,4 +57,12 @@ router.use("/reports", reportRoutes);
 const milestoneRoutes = require("./components/milestone/routers/milestone_routes.js");
 router.use("/milestones", milestoneRoutes);
 
+// Gallery Routes
+const galleryRoutes = require("./components/gallery/routers/gallery_routes.js");
+router.use("/gallery", galleryRoutes);
+
+// Partners Routes
+const partnersRoutes = require("./components/partners/routers/partner_routes.js");
+router.use("/partners", partnersRoutes);
+
 module.exports = router;
