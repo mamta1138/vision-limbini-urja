@@ -53,16 +53,10 @@ router.use("/ceo-message", ceoMessageRoutes);
 const reportRoutes = require("./components/report/routers/report_routes.js");       
 router.use("/reports", reportRoutes);
 
-// Milestone Routes
-const milestoneRoutes = require("./components/milestone/routers/milestone_routes.js");
-router.use("/milestones", milestoneRoutes);
-
 // Gallery Routes
 const galleryRoutes = require("./components/gallery/routers/gallery_routes.js");
 router.use("/gallery", galleryRoutes);
 
-// Partners Routes
-const partnersRoutes = require("./components/partners/routers/partner_routes.js");
-router.use("/partners", partnersRoutes);
+
 
 module.exports = router;
