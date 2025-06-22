@@ -35,11 +35,13 @@ const createBlog = async (req, res) => {
       generatedSlug = `blog-${Date.now()}`;
     }
 
+    const userId = req.user?._id 
     const newBlog = new Blog({
       ...value,
       slug: generatedSlug,
       image_url,
       gallery,
+      author: userId,
     });
 
     await newBlog.save();
