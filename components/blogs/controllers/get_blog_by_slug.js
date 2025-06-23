@@ -15,7 +15,6 @@ const getBlogBySlug = async (req, res) => {
     const normalizedSlug = generateNepaliSlug(slug);
 
     const blog = await Blog.findOne({ slug: normalizedSlug })
-      .populate("author", "fullname email")
       .populate("categories", "name slug _id")
       .populate("tags", "name slug");
 
@@ -31,7 +30,6 @@ const getBlogBySlug = async (req, res) => {
           _id: { $ne: blog._id },
           categories: categoryId
         })
-          .populate("author", "fullname")
           .populate("categories", "name slug")
           .limit(3)
       : [];
